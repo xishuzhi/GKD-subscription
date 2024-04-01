@@ -1,7 +1,7 @@
 {
     "id": 1329,
     "name": "xi的订阅",
-    "version": 113,
+    "version": 114,
     "author": "xi",
     "supportUri": "https://github.com/xishuzhi/GKD-subscription",
     "updateUrl": "https://github.com/xishuzhi/GKD-subscription/raw/main/subscription.json",
@@ -25,44 +25,6 @@
                             "quickFind": true,
                             "snapshotUrls": [
                                 "https://i.gkd.li/import/13681096"
-                            ]
-                        }
-                    ]
-                },
-                {
-                    "name": "领取页末红包",
-                    "key": 16,
-                    "desc": "点击页尾观看视频领红包",
-                    "rules": [
-                        {
-                            "key": 1,
-                            "matches": [
-                                "@[id=\"com.qidian.QDReader:id/layout_hongbao\"] > [text=\"红包\"] + [text=\"1个\"]"
-                            ],
-                            "actionDelay": 1000,
-                            "quickFind": true,
-                            "actionMaximum": 1,
-                            "resetMatch": "activity",
-                            "snapshotUrls": [
-                                "https://i.gkd.li/import/13681236"
-                            ],
-                            "activityIds": [
-                                "com.qidian.QDReader.ui.activity.QDReaderActivity"
-                            ]
-                        },
-                        {
-                            "preKeys": [
-                                1
-                            ],
-                            "matches": [
-                                "[id=\"com.qidian.QDReader:id/layoutHongbaoRoot\"]"
-                            ],
-                            "quickFind": true,
-                            "snapshotUrls": [
-                                "https://i.gkd.li/import/13681201"
-                            ],
-                            "activityIds": [
-                                "com.qidian.QDReader.ui.activity.QDReaderActivity"
                             ]
                         }
                     ]
@@ -140,56 +102,6 @@
                     ]
                 },
                 {
-                    "name": "限时彩蛋+每日福利+宝箱",
-                    "key": 31,
-                    "desc": "看视频3+1+1+8+1",
-                    "enable": false,
-                    "actionCd": 1000,
-                    "rules": [
-                        {
-                            "key": 1,
-                            "matches": [
-                                "@[desc=\"看视频开宝箱\"] > [text=\"看视频开宝箱\"]"
-                            ],
-                            "actionDelay": 2000,
-                            "snapshotUrls": [
-                                "https://i.gkd.li/import/13763238"
-                            ],
-                            "activityIds": [
-                                "com.qidian.QDReader.ui.activity.QDBrowserActivity"
-                            ]
-                        },
-                        {
-                            "key": 2,
-                            "matches": [
-                                "[text=\"限时彩蛋\"] < View > View > [text=\"看视频\" || desc=\"看视频\" || desc=\"领奖励\" || text=\"领奖励\"][clickable=true]"
-                            ],
-                            "actionDelay": 1200,
-                            "snapshotUrls": [
-                                "https://i.gkd.li/import/13747164",
-                                "https://i.gkd.li/import/13934297",
-                                "https://i.gkd.li/import/14003490"
-                            ],
-                            "activityIds": [
-                                "com.qidian.QDReader.ui.activity.QDBrowserActivity"
-                            ]
-                        },
-                        {
-                            "key": 3,
-                            "matches": [
-                                "[text=\"每日福利\"] +2 View > Button[text=\"看视频领福利\"]"
-                            ],
-                            "actionDelay": 800,
-                            "snapshotUrls": [
-                                "https://i.gkd.li/import/13721864"
-                            ],
-                            "activityIds": [
-                                "com.qidian.QDReader.ui.activity.QDBrowserActivity"
-                            ]
-                        }
-                    ]
-                },
-                {
                     "name": "阅读积分",
                     "key": 33,
                     "desc": "点击气泡领取阅读积分",
@@ -228,145 +140,6 @@
                     ]
                 },
                 {
-                    "name": "福利视频",
-                    "key": 43,
-                    "desc": "观看福利视频每5秒点击一次【x】",
-                    "rules": [
-                        {
-                            "key": 0,
-                            "matches": [
-                                "[id=\"video-content\"] > View[clickable=true]"
-                            ],
-                            "snapshotUrls": [
-                                "https://i.gkd.li/import/13698469"
-                            ],
-                            "activityIds": [
-                                "com.qq.e.tg.RewardvideoPortraitADActivity"
-                            ]
-                        },
-                        {
-                            "key": 1,
-                            "matches": [
-                                "[text=\"腾讯社交联盟广告\"] > View > View > View[clickable=true]"
-                            ],
-                            "snapshotUrls": [
-                                "https://i.gkd.li/import/13721879"
-                            ],
-                            "activityIds": [
-                                "com.qq.e.tg.RewardvideoPortraitADActivity"
-                            ]
-                        },
-                        {
-                            "key": 2,
-                            "matches": [
-                                "[text^=\"此图\" || text^=\"cross\"] < View[clickable=true]"
-                            ],
-                            "actionDelay": 5000,
-                            "snapshotUrls": [
-                                "https://i.gkd.li/import/13698735",
-                                "https://i.gkd.li/import/13680685"
-                            ],
-                            "activityIds": [
-                                "com.qq.e.tg.RewardvideoPortraitADActivity"
-                            ]
-                        },
-                        {
-                            "key": 3,
-                            "matches": [
-                                "[text^=\"已观看\"] - [text=\"跳过广告\" && clickable=true]"
-                            ],
-                            "actionDelay": 5000,
-                            "snapshotUrls": [
-                                "https://i.gkd.li/import/13698613"
-                            ],
-                            "activityIds": [
-                                "com.qq.e.tg.RewardvideoPortraitADActivity"
-                            ]
-                        },
-                        {
-                            "key": 4,
-                            "matches": [
-                                "[text=\"继续观看\"]"
-                            ],
-                            "quickFind": true,
-                            "snapshotUrls": [
-                                "https://i.gkd.li/import/13710080"
-                            ],
-                            "activityIds": [
-                                "com.qq.e.tg.RewardvideoPortraitADActivity"
-                            ]
-                        },
-                        {
-                            "key": 5,
-                            "matches": [
-                                "ToggleButton[text=\"关闭\"]"
-                            ],
-                            "actionDelay": 5000,
-                            "snapshotUrls": [
-                                "https://i.gkd.li/import/14031489"
-                            ],
-                            "activityIds": [
-                                "com.qq.e.tg.RewardvideoPortraitADActivity"
-                            ]
-                        },
-                        {
-                            "key": 6,
-                            "matches": [
-                                "@ToggleButton[text=\"关闭\"] > View > Image[text^=\"此图\"]"
-                            ],
-                            "snapshotUrls": [
-                                "https://i.gkd.li/import/14031501"
-                            ]
-                        },
-                        {
-                            "key": 7,
-                            "matches": [
-                                "[text=\"观看完视频，可获得奖励\"]",
-                                "ToggleButton[text=\"关闭\"]"
-                            ],
-                            "snapshotUrls": [
-                                "https://i.gkd.li/import/14034725"
-                            ],
-                            "activityIds": [
-                                "com.qq.e.tg.RewardvideoPortraitADActivity"
-                            ]
-                        },
-                        {
-                            "key": 8,
-                            "matches": [
-                                "[text=\"跳过广告\"]"
-                            ],
-                            "actionDelay": 5000,
-                            "quickFind": true,
-                            "snapshotUrls": [
-                                "https://i.gkd.li/i/14630484",
-                                "https://i.gkd.li/import/14058962"
-                            ]
-                        }
-                    ]
-                },
-                {
-                    "name": "观看完毕点【X】",
-                    "key": 44,
-                    "desc": "观看完视频完毕的立即领取广告",
-                    "rules": [
-                        {
-                            "matches": [
-                                "[text=\"立即领取\" || text=\"去微信看看\" || text$=\"下载\" || text=\"打开\" || text=\"查看详情\"]",
-                                "RelativeLayout > RelativeLayout + ImageView"
-                            ],
-                            "quickFind": true,
-                            "snapshotUrls": [
-                                "https://i.gkd.li/i/14739359",
-                                "https://i.gkd.li/i/14444735",
-                                "https://i.gkd.li/i/14058963",
-                                "https://i.gkd.li/i/14630389",
-                                "https://i.gkd.li/i/14739589"
-                            ]
-                        }
-                    ]
-                },
-                {
                     "name": "收听15秒获取奖励",
                     "key": 45,
                     "desc": "音频类广告",
@@ -383,6 +156,178 @@
                                 "https://i.gkd.li/i/14739265",
                                 "https://i.gkd.li/i/14739315",
                                 "https://i.gkd.li/i/14739782"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "最后一页弹窗",
+                    "key": 51,
+                    "desc": "关闭最后一页弹出窗口",
+                    "rules": [
+                        {
+                            "matches": [
+                                "[id=\"com.qidian.QDReader:id/imgClose\"]"
+                            ],
+                            "quickFind": true,
+                            "matchTime": 3000,
+                            "snapshotUrls": [
+                                "https://i.gkd.li/i/14800478"
+                            ],
+                            "activityIds": [
+                                "com.qidian.QDReader.ui.activity.BookLastPageNewActivity"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "点击【继续观看】",
+                    "key": 52,
+                    "desc": "观看视频时点关闭按钮提示时点击【继续观看】。",
+                    "rules": [
+                        {
+                            "matches": [
+                                "[text^=\"观看\"]",
+                                "[text=\"继续观看\"]"
+                            ],
+                            "actionCd": 3000,
+                            "quickFind": true,
+                            "snapshotUrls": [
+                                "https://i.gkd.li/i/13710080",
+                                "https://i.gkd.li/i/14800604"
+                            ],
+                            "activityIds": [
+                                "com.qq.e.tg.RewardvideoPortraitADActivity"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "观看完毕点【X】",
+                    "key": 55,
+                    "desc": "观看完视频完毕的立即领取广告",
+                    "rules": [
+                        {
+                            "matches": [
+                                "[text=\"立即领取\" || text=\"去微信看看\" || text$=\"下载\" || text=\"打开\" || text=\"查看详情\" || text=\"立即抢购\"]",
+                                "RelativeLayout > RelativeLayout + ImageView"
+                            ],
+                            "quickFind": true,
+                            "snapshotUrls": [
+                                "https://i.gkd.li/i/14739359",
+                                "https://i.gkd.li/i/14444735",
+                                "https://i.gkd.li/i/14058963",
+                                "https://i.gkd.li/i/14630389",
+                                "https://i.gkd.li/i/14739589",
+                                "https://i.gkd.li/i/14782659"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "已观看15秒",
+                    "key": 59,
+                    "desc": "观看视频15秒关闭视频",
+                    "rules": [
+                        {
+                            "matches": [
+                                "[text^=\"已观看视频\"]",
+                                "[text=\"跳过广告\"]"
+                            ],
+                            "quickFind": true,
+                            "forcedTime": 36000,
+                            "activityIds": [
+                                "com.qq.e.tg.RewardvideoPortraitADActivity"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "每日福利",
+                    "key": 60,
+                    "desc": "自动点击看视频开宝箱，看视频领福利，限时彩蛋",
+                    "rules": [
+                        {
+                            "key": 1,
+                            "matches": [
+                                "[text=\"每日福利\"]",
+                                "[desc^=\"看视频\"]"
+                            ],
+                            "actionDelay": 800,
+                            "snapshotUrls": [
+                                "https://i.gkd.li/i/14818510"
+                            ],
+                            "activityIds": [
+                                "com.qidian.QDReader.ui.activity.QDBrowserActivity"
+                            ]
+                        },
+                        {
+                            "matches": [
+                                "[text=\"每日福利\"]",
+                                "[text^=\"看视频\" && clickable=true]"
+                            ],
+                            "actionCdKey": 1,
+                            "actionDelay": 800,
+                            "snapshotUrls": [
+                                "https://i.gkd.li/i/14818510"
+                            ],
+                            "activityIds": [
+                                "com.qidian.QDReader.ui.activity.QDBrowserActivity"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "章节末尾领红视频",
+                    "key": 61,
+                    "desc": "自动点击章节末尾的红包看视频领奖励",
+                    "rules": [
+                        {
+                            "key": 1,
+                            "matches": [
+                                "[vid=\"tv_hongbao_value\" && text=\"1个\"]",
+                                "[id=\"com.qidian.QDReader:id/layout_hongbao\"]"
+                            ],
+                            "actionDelay": 500,
+                            "quickFind": true,
+                            "actionMaximum": 1,
+                            "resetMatch": "activity",
+                            "snapshotUrls": [
+                                "https://i.gkd.li/i/14818692"
+                            ],
+                            "activityIds": [
+                                "com.qidian.QDReader.ui.activity.QDReaderActivity"
+                            ]
+                        },
+                        {
+                            "preKeys": [
+                                1
+                            ],
+                            "matches": [
+                                "[id=\"com.qidian.QDReader:id/openHongbaoTv\"]"
+                            ],
+                            "quickFind": true,
+                            "snapshotUrls": [
+                                "https://i.gkd.li/i/14818693"
+                            ],
+                            "activityIds": [
+                                "com.qidian.QDReader.ui.activity.QDReaderActivity"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "已观看15秒2",
+                    "key": 62,
+                    "desc": "观看视频15秒关闭视频2",
+                    "enable": false,
+                    "rules": [
+                        {
+                            "matches": [
+                                "[text^=\"已观看视频\"] - *[clickable=true]"
+                            ],
+                            "activityIds": [
+                                "com.qq.e.tg.RewardvideoPortraitADActivity"
                             ]
                         }
                     ]
@@ -473,24 +418,6 @@
             "name": "QQ阅读",
             "groups": [
                 {
-                    "name": "页面切换广告",
-                    "key": 1,
-                    "desc": "后台切前台时的广告弹窗",
-                    "rules": [
-                        {
-                            "matches": [
-                                "TextView[text^=\"跳过\"][clickable=true]"
-                            ],
-                            "snapshotUrls": [
-                                "https://i.gkd.li/import/13698944"
-                            ],
-                            "activityIds": [
-                                "com.qq.reader.activity.SplashADVActivity"
-                            ]
-                        }
-                    ]
-                },
-                {
                     "name": "开会员领赠币",
                     "key": 4,
                     "desc": "关闭开会员再领赠币窗口",
@@ -505,25 +432,6 @@
                             ],
                             "activityIds": [
                                 "com.qq.reader.activity.WebBrowserForFullScreenContents"
-                            ]
-                        }
-                    ]
-                },
-                {
-                    "name": "开屏广告",
-                    "key": 6,
-                    "desc": "开屏广告点击跳过按钮",
-                    "quickFind": true,
-                    "rules": [
-                        {
-                            "matches": [
-                                "[text^=\"跳过\"]"
-                            ],
-                            "snapshotUrls": [
-                                "https://i.gkd.li/import/13896114"
-                            ],
-                            "activityIds": [
-                                "com.qq.reader.activity.SplashActivity"
                             ]
                         }
                     ]
@@ -605,41 +513,61 @@
                     ]
                 },
                 {
-                    "name": "看视频领赠币",
-                    "key": 11,
-                    "desc": "5秒点击一次【x】",
+                    "name": "开屏广告",
+                    "key": 12,
+                    "desc": "开屏广告，后台切前台广告",
                     "rules": [
                         {
-                            "key": 0,
                             "matches": [
-                                "[text=\"腾讯广告\"] > View > View > @View[clickable=true] > View > Image[text=\"\"]"
+                                "[text^=\"跳过\"]"
+                            ],
+                            "quickFind": true,
+                            "matchTime": 3000,
+                            "resetMatch": "app",
+                            "snapshotUrls": [
+                                "https://i.gkd.li/import/13896114",
+                                "https://i.gkd.li/i/14818921",
+                                "https://i.gkd.li/import/13698944"
+                            ],
+                            "activityIds": [
+                                "com.qq.reader.activity.SplashActivity",
+                                "com.qq.reader.activity.launch.DefaultAliasSplashActivity",
+                                "com.qq.reader.activity.SplashADVActivity"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "视频广告点击【x】",
+                    "key": 13,
+                    "desc": "观看完视频广告点击【x】",
+                    "rules": [
+                        {
+                            "matches": [
+                                "@View[left<100 && top<150 && clickable=true] > View > Image"
                             ],
                             "snapshotUrls": [
-                                "https://i.gkd.li/import/13698853"
+                                "https://i.gkd.li/i/14818976"
                             ],
                             "activityIds": [
                                 "com.qq.e.tg.RewardvideoPortraitADActivity"
                             ]
-                        },
+                        }
+                    ]
+                },
+                {
+                    "name": "观看30秒关闭视频",
+                    "key": 14,
+                    "desc": "观看视频超过31秒点击关闭按钮",
+                    "rules": [
                         {
-                            "key": 1,
                             "matches": [
-                                "[text=\"关闭按钮\"||text=\"跳过广告\"]"
+                                "Button[left<100 && top<150 && clickable=true]"
                             ],
-                            "actionDelay": 5000,
+                            "actionDelay": 31000,
+                            "forcedTime": 36000,
                             "snapshotUrls": [
-                                "https://i.gkd.li/import/13698874",
-                                "https://i.gkd.li/import/13710203",
-                                "https://i.gkd.li/i/14770289"
-                            ]
-                        },
-                        {
-                            "key": 2,
-                            "matches": [
-                                "[text=\"继续观看\"]"
-                            ],
-                            "snapshotUrls": [
-                                "https://i.gkd.li/import/13738952"
+                                "https://i.gkd.li/i/14819006"
                             ],
                             "activityIds": [
                                 "com.qq.e.tg.RewardvideoPortraitADActivity"
@@ -808,13 +736,13 @@
                     ]
                 },
                 {
-                    "name": "开门后广告弹窗",
+                    "name": "开门成功广告",
                     "key": 2,
-                    "desc": "关闭开门成功弹出广告",
+                    "desc": "开门成功点击右上角【x】",
                     "rules": [
                         {
                             "matches": [
-                                "@View + View + TextView[text=\"反馈\"]"
+                                "@View[top<600 && left>800] > Image"
                             ],
                             "snapshotUrls": [
                                 "https://i.gkd.li/i/14755943"
