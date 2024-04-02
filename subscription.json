@@ -1,7 +1,7 @@
 {
     "id": 1329,
     "name": "xi的订阅",
-    "version": 114,
+    "version": 115,
     "author": "xi",
     "supportUri": "https://github.com/xishuzhi/GKD-subscription",
     "updateUrl": "https://github.com/xishuzhi/GKD-subscription/raw/main/subscription.json",
@@ -303,9 +303,11 @@
                             "preKeys": [
                                 1
                             ],
+                            "action": "clickCenter",
                             "matches": [
                                 "[id=\"com.qidian.QDReader:id/openHongbaoTv\"]"
                             ],
+                            "actionDelay": 500,
                             "quickFind": true,
                             "snapshotUrls": [
                                 "https://i.gkd.li/i/14818693"
@@ -328,6 +330,29 @@
                             ],
                             "activityIds": [
                                 "com.qq.e.tg.RewardvideoPortraitADActivity"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "关闭更新提醒",
+                    "key": 63,
+                    "desc": "小说最后一章末尾的更新提醒自动关闭",
+                    "rules": [
+                        {
+                            "action": "clickCenter",
+                            "matches": [
+                                "[id=\"com.qidian.QDReader:id/switchUpdate\" && checked=true]"
+                            ],
+                            "actionMaximum": 1,
+                            "matchTime": 3000,
+                            "resetMatch": "activity",
+                            "snapshotUrls": [
+                                "https://i.gkd.li/i/14820829",
+                                "https://i.gkd.li/i/14820830"
+                            ],
+                            "activityIds": [
+                                "com.qidian.QDReader.ui.activity.BookLastPageNewActivity"
                             ]
                         }
                     ]
