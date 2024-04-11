@@ -1,7 +1,7 @@
 {
     "id": 1329,
     "name": "xi的订阅",
-    "version": 115,
+    "version": 116,
     "author": "xi",
     "supportUri": "https://github.com/xishuzhi/GKD-subscription",
     "updateUrl": "https://github.com/xishuzhi/GKD-subscription/raw/main/subscription.json",
@@ -369,7 +369,7 @@
                     "desc": "点击刷码成功弹窗页面关闭按钮",
                     "quickFind": true,
                     "actionMaximum": 1,
-                    "matchTime": 1000,
+                    "matchTime": 2000,
                     "resetMatch": "activity",
                     "rules": [
                         {
@@ -883,7 +883,7 @@
                                 0
                             ],
                             "matches": [
-                                "[text=\"视频不感兴趣\"]"
+                                "[text$=\"不感兴趣\"]"
                             ],
                             "quickFind": true,
                             "snapshotUrls": [
