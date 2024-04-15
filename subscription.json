@@ -1,7 +1,7 @@
 {
     "id": 1329,
     "name": "xi的订阅",
-    "version": 116,
+    "version": 117,
     "author": "xi",
     "supportUri": "https://github.com/xishuzhi/GKD-subscription",
     "updateUrl": "https://github.com/xishuzhi/GKD-subscription/raw/main/subscription.json",
@@ -21,6 +21,9 @@
                         {
                             "matches": [
                                 "[id=\"com.qidian.QDReader:id/btnRight\"]"
+                            ],
+                            "excludeMatches":[
+                                "[text^=\"确认将本书\"]"
                             ],
                             "quickFind": true,
                             "snapshotUrls": [
