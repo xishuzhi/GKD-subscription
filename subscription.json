@@ -1,7 +1,7 @@
 {
     "id": 1329,
     "name": "xi的订阅",
-    "version": 117,
+    "version": 118,
     "author": "xi",
     "supportUri": "https://github.com/xishuzhi/GKD-subscription",
     "updateUrl": "https://github.com/xishuzhi/GKD-subscription/raw/main/subscription.json",
@@ -22,7 +22,7 @@
                             "matches": [
                                 "[id=\"com.qidian.QDReader:id/btnRight\"]"
                             ],
-                            "excludeMatches":[
+                            "excludeMatches": [
                                 "[text^=\"确认将本书\"]"
                             ],
                             "quickFind": true,
@@ -599,6 +599,26 @@
                             ],
                             "activityIds": [
                                 "com.qq.e.tg.RewardvideoPortraitADActivity"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "阅读30分钟休息提示",
+                    "key": 15,
+                    "desc": "持续阅读30分钟的提示弹窗",
+                    "rules": [
+                        {
+                            "matches": [
+                                "[text$=\"休息一下吧\"]",
+                                "[text=\"继续阅读\"]"
+                            ],
+                            "quickFind": true,
+                            "snapshotUrls": [
+                                "https://i.gkd.li/i/15059546"
+                            ],
+                            "activityIds": [
+                                "com.qq.reader.activity.ReaderPageActivity"
                             ]
                         }
                     ]
