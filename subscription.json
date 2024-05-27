@@ -1,7 +1,7 @@
 {
     "id": 1329,
     "name": "xi的订阅",
-    "version": 118,
+    "version": 119,
     "author": "xi",
     "supportUri": "https://github.com/xishuzhi/GKD-subscription",
     "updateUrl": "https://github.com/xishuzhi/GKD-subscription/raw/main/subscription.json",
@@ -384,6 +384,25 @@
                             ],
                             "activityIds": [
                                 "enfc.metro.session.web.rn.RPReactActivity"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "刷码成功广告弹窗2",
+                    "key": 2,
+                    "desc": "刷码成功广告点击返回",
+                    "rules": [
+                        {
+                            "matches": [
+                                "[id=\"enfc.metro:id/img_CommonTitleBar_LeftImage\"]"
+                            ],
+                            "quickFind": true,
+                            "snapshotUrls": [
+                                "https://i.gkd.li/i/15291793"
+                            ],
+                            "activityIds": [
+                                "enfc.metro.session.web.webview.RPJSBridgeActivity"
                             ]
                         }
                     ]
@@ -937,6 +956,50 @@
                             "quickFind": true,
                             "snapshotUrls": [
                                 "https://i.gkd.li/i/14770420"
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "com.ss.android.ugc.live",
+            "name": "抖音火山版",
+            "groups": [
+                {
+                    "name": "宝箱1",
+                    "key": 0,
+                    "desc": "关闭宝箱广告播放完毕领取成功按钮",
+                    "rules": [
+                        {
+                            "matches": [
+                                "[text=\"领取成功，关闭，按钮\"]"
+                            ],
+                            "quickFind": true,
+                            "snapshotUrls": [
+                                "https://i.gkd.li/i/15383808"
+                            ],
+                            "activityIds": [
+                                "com.ss.android.excitingvideo.ExcitingVideoActivity"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "宝箱2",
+                    "key": 1,
+                    "desc": "宝箱关闭继续领取",
+                    "rules": [
+                        {
+                            "matches": [
+                                "[text=\"领取奖励\"]"
+                            ],
+                            "quickFind": true,
+                            "snapshotUrls": [
+                                "https://i.gkd.li/i/15383816"
+                            ],
+                            "activityIds": [
+                                "com.ss.android.excitingvideo.ExcitingVideoActivity"
                             ]
                         }
                     ]
