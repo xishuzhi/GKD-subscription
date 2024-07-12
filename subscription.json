@@ -1,7 +1,7 @@
 {
     "id": 1329,
     "name": "xi的订阅",
-    "version": 119,
+    "version": 120,
     "author": "xi",
     "supportUri": "https://github.com/xishuzhi/GKD-subscription",
     "updateUrl": "https://github.com/xishuzhi/GKD-subscription/raw/main/subscription.json",
@@ -281,47 +281,6 @@
                     ]
                 },
                 {
-                    "name": "章节末尾领红视频",
-                    "key": 61,
-                    "desc": "自动点击章节末尾的红包看视频领奖励",
-                    "rules": [
-                        {
-                            "key": 1,
-                            "matches": [
-                                "[vid=\"tv_hongbao_value\" && text=\"1个\"]",
-                                "[id=\"com.qidian.QDReader:id/layout_hongbao\"]"
-                            ],
-                            "actionDelay": 500,
-                            "quickFind": true,
-                            "actionMaximum": 1,
-                            "resetMatch": "activity",
-                            "snapshotUrls": [
-                                "https://i.gkd.li/i/14818692"
-                            ],
-                            "activityIds": [
-                                "com.qidian.QDReader.ui.activity.QDReaderActivity"
-                            ]
-                        },
-                        {
-                            "preKeys": [
-                                1
-                            ],
-                            "action": "clickCenter",
-                            "matches": [
-                                "[id=\"com.qidian.QDReader:id/openHongbaoTv\"]"
-                            ],
-                            "actionDelay": 500,
-                            "quickFind": true,
-                            "snapshotUrls": [
-                                "https://i.gkd.li/i/14818693"
-                            ],
-                            "activityIds": [
-                                "com.qidian.QDReader.ui.activity.QDReaderActivity"
-                            ]
-                        }
-                    ]
-                },
-                {
                     "name": "已观看15秒2",
                     "key": 62,
                     "desc": "观看视频15秒关闭视频2",
@@ -356,6 +315,37 @@
                             ],
                             "activityIds": [
                                 "com.qidian.QDReader.ui.activity.BookLastPageNewActivity"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "领取页末红包",
+                    "key": 64,
+                    "desc": "点击页尾观看视频领红包",
+                    "rules": [
+                        {
+                            "key": 1,
+                            "matches": [
+                                "@[vid=\"layout_hongbao\"] > [text=\"1个红包\"]"
+                            ],
+                            "actionDelay": 1000,
+                            "actionMaximum": 1,
+                            "resetMatch": "activity",
+                            "activityIds": [
+                                "com.qidian.QDReader.ui.activity.QDReaderActivity"
+                            ]
+                        },
+                        {
+                            "preKeys": [
+                                1
+                            ],
+                            "matches": [
+                                "[vid=\"layoutHongbaoRoot\"]"
+                            ],
+                            "quickFind": true,
+                            "activityIds": [
+                                "com.qidian.QDReader.ui.activity.QDReaderActivity"
                             ]
                         }
                     ]
