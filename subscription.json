@@ -1,7 +1,7 @@
 {
     "id": 1329,
     "name": "xi的订阅",
-    "version": 120,
+    "version": 121,
     "author": "xi",
     "supportUri": "https://github.com/xishuzhi/GKD-subscription",
     "updateUrl": "https://github.com/xishuzhi/GKD-subscription/raw/main/subscription.json",
@@ -991,6 +991,128 @@
                             "activityIds": [
                                 "com.ss.android.excitingvideo.ExcitingVideoActivity"
                             ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "com.kuaishou.nebula",
+            "name": "快手极速版",
+            "groups": [
+                {
+                    "name": "看完领取奖励",
+                    "key": 0,
+                    "rules": [
+                        {
+                            "action": "clickCenter",
+                            "matches": [
+                                "[text=\"已成功领取奖励\"]"
+                            ],
+                            "quickFind": true,
+                            "activityIds": [
+                                "com.yxcorp.gifshow.ad.neo.video.award.AwardVideoPlayActivity"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "饭补金币",
+                    "key": 3,
+                    "rules": [
+                        {
+                            "matches": [
+                                "[text=\"已成功领取奖励\"]"
+                            ],
+                            "quickFind": true,
+                            "activityIds": [
+                                "com.yxcorp.gifshow.ad.neo.videov2.award.AwardVideoPlayActivityV2"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "看直播领奖励",
+                    "key": 4,
+                    "rules": [
+                        {
+                            "matches": [
+                                "[vid=\"neo_count_down_text\" && text=\"已领取\"]",
+                                "[id=\"com.kuaishou.nebula.live_audience_plugin:id/live_close\"]"
+                            ],
+                            "activityIds": [
+                                "com.yxcorp.gifshow.detail.PhotoDetailActivity"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "看直播再领一个奖励",
+                    "key": 5,
+                    "rules": [
+                        {
+                            "matches": [
+                                "[text=\"领取奖励\"]"
+                            ],
+                            "quickFind": true,
+                            "activityIds": [
+                                "com.yxcorp.gifshow.detail.PhotoDetailActivity"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "猜你喜欢点退出",
+                    "key": 6,
+                    "rules": [
+                        {
+                            "matches": [
+                                "[text=\"猜你喜欢\"]",
+                                "[text=\"退出\"]"
+                            ],
+                            "quickFind": true,
+                            "activityIds": [
+                                "com.yxcorp.gifshow.detail.PhotoDetailActivity"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "看广告领福利",
+                    "key": 7,
+                    "enable": false,
+                    "rules": [
+                        {
+                            "matches": [
+                                "@View[text=\"领福利\"] - View > [text^=\"看广告得\"]"
+                            ],
+                            "activityIds": [
+                                "com.yxcorp.gifshow.webview.KwaiYodaWebViewActivity"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "放弃奖励",
+                    "key": 9,
+                    "rules": [
+                        {
+                            "matches": [
+                                "[text=\"放弃奖励\"]"
+                            ],
+                            "quickFind": true
+                        }
+                    ]
+                },
+                {
+                    "name": "再看一个视频",
+                    "key": 10,
+                    "rules": [
+                        {
+                            "matches": [
+                                "[text=\"领取奖励\"]"
+                            ],
+                            "quickFind": true
                         }
                     ]
                 }
