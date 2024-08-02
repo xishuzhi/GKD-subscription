@@ -1,7 +1,7 @@
 {
     "id": 1329,
     "name": "xi的订阅",
-    "version": 121,
+    "version": 122,
     "author": "xi",
     "supportUri": "https://github.com/xishuzhi/GKD-subscription",
     "updateUrl": "https://github.com/xishuzhi/GKD-subscription/raw/main/subscription.json",
@@ -1040,21 +1040,6 @@
                                 "[vid=\"neo_count_down_text\" && text=\"已领取\"]",
                                 "[id=\"com.kuaishou.nebula.live_audience_plugin:id/live_close\"]"
                             ],
-                            "activityIds": [
-                                "com.yxcorp.gifshow.detail.PhotoDetailActivity"
-                            ]
-                        }
-                    ]
-                },
-                {
-                    "name": "看直播再领一个奖励",
-                    "key": 5,
-                    "rules": [
-                        {
-                            "matches": [
-                                "[text=\"领取奖励\"]"
-                            ],
-                            "quickFind": true,
                             "activityIds": [
                                 "com.yxcorp.gifshow.detail.PhotoDetailActivity"
                             ]
