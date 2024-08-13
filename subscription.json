@@ -1,7 +1,7 @@
 {
     "id": 1329,
     "name": "xi的订阅",
-    "version": 122,
+    "version": 123,
     "author": "xi",
     "supportUri": "https://github.com/xishuzhi/GKD-subscription",
     "updateUrl": "https://github.com/xishuzhi/GKD-subscription/raw/main/subscription.json",
@@ -212,7 +212,7 @@
                     "rules": [
                         {
                             "matches": [
-                                "[text=\"立即领取\" || text=\"去微信看看\" || text$=\"下载\" || text=\"打开\" || text=\"查看详情\" || text=\"立即抢购\"]",
+                                "[text=\"立即领取\" || text=\"去微信看看\" || text$=\"下载\" || text=\"打开\" || text=\"查看详情\" || text=\"立即抢购\" || text^=\"了解\"]",
                                 "RelativeLayout > RelativeLayout + ImageView"
                             ],
                             "quickFind": true,
@@ -705,6 +705,21 @@
                             ],
                             "activityIds": [
                                 "com.bytedance.mira.stub.p0.StubStandardActivity10"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "广告视频关闭",
+                    "key": 4,
+                    "rules": [
+                        {
+                            "matches": [
+                                "[text=\"关闭\"]"
+                            ],
+                            "quickFind": true,
+                            "activityIds": [
+                                "com.ss.android.excitingvideo.ExcitingVideoActivity"
                             ]
                         }
                     ]
