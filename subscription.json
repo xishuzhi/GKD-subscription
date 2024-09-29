@@ -160,6 +160,17 @@
                                 "https://i.gkd.li/i/14739315",
                                 "https://i.gkd.li/i/14739782"
                             ]
+                        },
+                        {
+                            "matches": [
+                                "[text=\"继续听完\"]"
+                            ],
+                            "snapshotUrls": [
+                                "https://i.gkd.li/i/17178273"
+                            ],
+                            "activityIds": [
+                                "com.qidian.QDReader.ui.activity.QDBrowserActivity"
+                            ]
                         }
                     ]
                 },
@@ -212,7 +223,7 @@
                     "rules": [
                         {
                             "matches": [
-                                "[text=\"立即领取\" || text=\"去微信看看\" || text$=\"下载\" || text=\"打开\" || text=\"查看详情\" || text=\"立即抢购\" || text^=\"了解\"]",
+                                "[text=\"立即领取\" || text=\"去微信看看\" || text$=\"下载\" || text=\"打开\" || text=\"查看详情\" || text=\"立即抢购\" || text=\"立即预定\" || text=\"立即购买\" || text^=\"了解\"]",
                                 "RelativeLayout > RelativeLayout + ImageView"
                             ],
                             "quickFind": true,
@@ -346,6 +357,87 @@
                             "quickFind": true,
                             "activityIds": [
                                 "com.qidian.QDReader.ui.activity.QDReaderActivity"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "兑换500起点币",
+                    "key": 65,
+                    "desc": "使用2500听书成长积分兑换点币*500",
+                    "rules": [
+                        {
+                            "matches": [
+                                "[text=\"点币*500\"] +3 Image[clickable=true]"
+                            ],
+                            "snapshotUrls": [
+                                "https://i.gkd.li/i/16939059"
+                            ],
+                            "activityIds": [
+                                "com.qidian.QDReader.ui.activity.QDBrowserActivity"
+                            ]
+                        },
+                        {
+                            "matches": [
+                                "[text=\"请确认是否使用2500听书成长积分兑换点币*500?\"] +2 Button[text=\"立即兑换\"]"
+                            ],
+                            "snapshotUrls": [
+                                "https://i.gkd.li/i/16939063"
+                            ],
+                            "activityIds": [
+                                "com.qidian.QDReader.ui.activity.QDBrowserActivity"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "每周日兑换章节卡",
+                    "key": 66,
+                    "desc": "每周日用30碎片兑换20点章节卡",
+                    "rules": [
+                        {
+                            "matches": [
+                                "[text=\"30张碎片可兑换\"]",
+                                "[text=\"当前可兑换： 30章节卡碎片\"]",
+                                "[text=\"周日兑换章节卡\"]"
+                            ],
+                            "actionDelay": 500,
+                            "actionMaximum": 1,
+                            "resetMatch": "activity",
+                            "snapshotUrls": [
+                                "https://i.gkd.li/i/17177863"
+                            ],
+                            "activityIds": [
+                                "com.qidian.QDReader.ui.activity.QDBrowserActivity"
+                            ]
+                        },
+                        {
+                            "preKeys": [
+                                1
+                            ],
+                            "matches": [
+                                "[text=\"30张碎片可兑换\"]",
+                                "[text=\"30张碎片兑换\"] + View[desc=\"兑换\"]"
+                            ],
+                            "actionDelay": 500,
+                            "snapshotUrls": [
+                                "https://i.gkd.li/i/17177864"
+                            ],
+                            "activityIds": [
+                                "com.qidian.QDReader.ui.activity.QDBrowserActivity"
+                            ]
+                        },
+                        {
+                            "matches": [
+                                "[text=\"兑换20点章节卡\"] +3 View[desc=\"兑换\"]"
+                            ],
+                            "actionMaximum": 1,
+                            "resetMatch": "app",
+                            "snapshotUrls": [
+                                "https://i.gkd.li/i/17178255"
+                            ],
+                            "activityIds": [
+                                "com.qidian.QDReader.ui.activity.QDBrowserActivity"
                             ]
                         }
                     ]
@@ -894,6 +986,28 @@
                             ],
                             "activityIds": [
                                 "com.ss.android.excitingvideo.ExcitingVideoActivity"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "看视频领XX时长",
+                    "key": 2,
+                    "desc": "番茄畅听看视频领10分钟听书时长。",
+                    "rules": [
+                        {
+                            "matches": [
+                                "[text=\"提前领时长，听书不中断\"]",
+                                "[text=\"看视频领XX时长\"]"
+                            ],
+                            "actionDelay": 1300,
+                            "quickFind": true,
+                            "snapshotUrls": [
+                                "https://i.gkd.li/i/16831957"
+                            ],
+                            "activityIds": [
+                                "com.dragon.read.reader.speech.page.AudioPlayActivity",
+                                "com.dragon.read.admodule.adfm.unlocktime.activity.TimeShowDetailActivity"
                             ]
                         }
                     ]
