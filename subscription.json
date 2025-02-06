@@ -1,7 +1,7 @@
 {
     "id": 1329,
     "name": "xi的订阅",
-    "version": 124,
+    "version": 125,
     "author": "xi",
     "supportUri": "https://github.com/xishuzhi/GKD-subscription",
     "updateUrl": "https://github.com/xishuzhi/GKD-subscription/raw/main/subscription.json",
@@ -223,7 +223,7 @@
                     "rules": [
                         {
                             "matches": [
-                                "[text=\"立即领取\" || text=\"去微信看看\" || text$=\"下载\" || text=\"打开\" || text=\"查看详情\" || text=\"立即抢购\" || text=\"立即预定\" || text=\"立即购买\" || text^=\"了解\"]",
+                                "[text=\"立即领取\" || text=\"去微信看看\" || text$=\"下载\" || text=\"打开\" || text=\"查看详情\" || text=\"立即抢购\" || text^=\"立即预\" || text=\"立即购买\" || text^=\"了解\" || text=\"立即申请\"]",
                                 "RelativeLayout > RelativeLayout + ImageView"
                             ],
                             "quickFind": true,
@@ -362,13 +362,13 @@
                     ]
                 },
                 {
-                    "name": "兑换500起点币",
+                    "name": "兑换100起点币",
                     "key": 65,
-                    "desc": "使用2500听书成长积分兑换点币*500",
+                    "desc": "使用500听书成长积分兑换点币*100",
                     "rules": [
                         {
                             "matches": [
-                                "[text=\"点币*500\"] +3 Image[clickable=true]"
+                                "[text=\"点币*100\"] +3 Image[clickable=true]"
                             ],
                             "snapshotUrls": [
                                 "https://i.gkd.li/i/16939059"
@@ -379,7 +379,7 @@
                         },
                         {
                             "matches": [
-                                "[text=\"请确认是否使用2500听书成长积分兑换点币*500?\"] +2 Button[text=\"立即兑换\"]"
+                                "[text=\"请确认是否使用500听书成长积分兑换点币*100?\"] +2 Button[text=\"立即兑换\"]"
                             ],
                             "snapshotUrls": [
                                 "https://i.gkd.li/i/16939063"
@@ -441,6 +441,155 @@
                             ]
                         }
                     ]
+                },
+                {
+                    "name": "起点新版激励视频",
+                    "key": 67,
+                    "desc": "点击看视频领奖励",
+                    "rules": [
+                        {
+                            "matches": [
+                                "[id=\"video\"]",
+                                "[text=\"看视频\"]"
+                            ],
+                            "excludeMatches": [
+                                "[text=\"知道了\"]"
+                            ],
+                            "actionDelay": 1000,
+                            "snapshotUrls": [
+                                "https://i.gkd.li/i/18225251",
+                                "https://i.gkd.li/i/18225329"
+                            ],
+                            "activityIds": [
+                                "com.qidian.QDReader.ui.activity.QDBrowserActivity"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "起点新版激励视频关闭",
+                    "key": 68,
+                    "desc": "起点新版激励视频播放完成点击知道了",
+                    "rules": [
+                        {
+                            "matches": [
+                                "[text^=\"恭喜获得\"]",
+                                "[text=\"知道了\"]"
+                            ],
+                            "snapshotUrls": [
+                                "https://i.gkd.li/i/18225329"
+                            ],
+                            "activityIds": [
+                                "com.qidian.QDReader.ui.activity.QDBrowserActivity"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "新版领积分",
+                    "key": 69,
+                    "desc": "新版领取看书积分",
+                    "rules": [
+                        {
+                            "matches": [
+                                "[text=\"领积分\"]"
+                            ],
+                            "actionDelay": 1000,
+                            "snapshotUrls": [
+                                "https://i.gkd.li/i/18244734"
+                            ],
+                            "activityIds": [
+                                "com.qidian.QDReader.ui.activity.QDBrowserActivity"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "起点激励视频点【x】",
+                    "key": 70,
+                    "desc": "新版起点激励视频看完点【x】",
+                    "rules": [
+                        {
+                            "matches": [
+                                "View[left=124 && right=322]",
+                                "ViewGroup[childCount=2 && width=88 && height=88]"
+                            ],
+                            "snapshotUrls": [
+                                "https://i.gkd.li/i/18272508"
+                            ],
+                            "activityIds": [
+                                "com.qq.e.tg.RewardvideoPortraitADActivity"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "新版起点限时福利2",
+                    "key": 71,
+                    "desc": "新版起点激励视频看完点【x】2",
+                    "rules": [
+                        {
+                            "matches": [
+                                "View[left=232 && top=1751 && height=44]"
+                            ],
+                            "activityIds": [
+                                "com.qq.e.tg.RewardvideoPortraitADActivity"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "新版起点限时福利",
+                    "key": 72,
+                    "desc": "放弃福利继续观看视频",
+                    "rules": [
+                        {
+                            "matches": [
+                                "View[left=232 && top=1751 && height=44]"
+                            ],
+                            "activityIds": [
+                                "com.qq.e.tg.RewardvideoPortraitADActivity"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "看视频后点X",
+                    "key": 73,
+                    "desc": "提示恭喜获得奖励时点X",
+                    "rules": [
+                        {
+                            "matches": [
+                                "ViewGroup + View[width=234]",
+                                "ViewGroup[childCount=2] > ViewGroup[width=52 && height=52]"
+                            ],
+                            "snapshotUrls": [
+                                "https://i.gkd.li/i/18682737"
+                            ],
+                            "activityIds": [
+                                "com.qq.e.tg.RewardvideoPortraitADActivity"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "看视频时弹出限时福利X",
+                    "key": 74,
+                    "desc": "看视频时弹出限时福利时点X",
+                    "rules": [
+                        {
+                            "matches": [
+                                "ViewGroup[childCount=3] > ViewGroup[childCount=8]",
+                                "ViewGroup[childCount=2] > ViewGroup[width=52 && height=52]"
+                            ],
+                            "snapshotUrls": [
+                                "https://i.gkd.li/i/18682830"
+                            ],
+                            "activityIds": [
+                                "com.qq.e.tg.RewardvideoPortraitADActivity"
+                            ]
+                        }
+                    ]
                 }
             ]
         },
@@ -485,6 +634,25 @@
                             ],
                             "activityIds": [
                                 "enfc.metro.session.web.webview.RPJSBridgeActivity"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "刷卡成功后广告",
+                    "key": 3,
+                    "desc": "关闭刷码成功后弹出广告",
+                    "rules": [
+                        {
+                            "matches": [
+                                "[vid=\"ms_img_close\"]"
+                            ],
+                            "fastQuery": true,
+                            "snapshotUrls": [
+                                "https://i.gkd.li/i/18681380"
+                            ],
+                            "activityIds": [
+                                "com.meishu.sdk.activity.MeishuWebviewActivity"
                             ]
                         }
                     ]
@@ -913,6 +1081,57 @@
                             ]
                         }
                     ]
+                },
+                {
+                    "name": "开门成功提示",
+                    "key": 3,
+                    "desc": "开门成功点好的关闭",
+                    "rules": [
+                        {
+                            "matches": [
+                                "[desc^=\"开门成功\"] > [desc=\"好 的\"]"
+                            ],
+                            "exampleUrls": [
+                                "https://e.gkd.li/undefined"
+                            ],
+                            "activityIds": [
+                                "com.qinlin.edoor.MainActivity"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "开门成功广告2",
+                    "key": 4,
+                    "desc": "开门成功点右上角x按钮尺寸60",
+                    "rules": [
+                        {
+                            "matches": [
+                                "FrameLayout > ImageView[width<60 && height<60]"
+                            ],
+                            "exampleUrls": [
+                                "https://e.gkd.li/undefined"
+                            ],
+                            "activityIds": [
+                                "com.qinlin.edoor.MainActivity"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "开门成功点击x",
+                    "key": 5,
+                    "desc": "开门成功广告点x",
+                    "rules": [
+                        {
+                            "matches": [
+                                "[text=\"反馈\"] < ViewGroup - ViewGroup"
+                            ],
+                            "activityIds": [
+                                "com.bytedance.sdk.openadsdk.stub.activity.Stub_Standard_Portrait_Activity"
+                            ]
+                        }
+                    ]
                 }
             ]
         },
@@ -1052,6 +1271,39 @@
                                 "https://i.gkd.li/import/13625309",
                                 "https://i.gkd.li/import/13742257",
                                 "https://i.gkd.li/i/14533441"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "猫猫点喵",
+                    "key": 1,
+                    "desc": "点喵",
+                    "rules": [
+                        {
+                            "matches": [
+                                "View > [text=\"喵\"]"
+                            ],
+                            "actionDelay": 560000,
+                            "activityIds": [
+                                "com.bilibili.bililive.room.ui.roomv3.LiveRoomActivityV3"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "猫猫打开控制",
+                    "key": 2,
+                    "desc": "打开猫猫",
+                    "rules": [
+                        {
+                            "matches": [
+                                "[vid=\"biz_enter\"]"
+                            ],
+                            "actionDelay": 3000,
+                            "fastQuery": true,
+                            "activityIds": [
+                                "com.bilibili.bililive.room.ui.roomv3.LiveRoomActivityV3"
                             ]
                         }
                     ]
@@ -1227,6 +1479,81 @@
                                 "[text=\"领取奖励\"]"
                             ],
                             "quickFind": true
+                        }
+                    ]
+                },
+                {
+                    "name": "看完领取奖励2",
+                    "key": 11,
+                    "rules": [
+                        {
+                            "matches": [
+                                "[text^=\"已成功领取\"] + @[id=\"com.kuaishou.nebula.commercial_neo:id/video_countdown_end_icon\"]"
+                            ],
+                            "fastQuery": true,
+                            "snapshotUrls": [
+                                "https://i.gkd.li/i/18105098"
+                            ],
+                            "activityIds": [
+                                "com.yxcorp.gifshow.ad.neo.video.award.AwardVideoPlayActivity"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "到点领饭",
+                    "key": 12,
+                    "desc": "看广告",
+                    "rules": [
+                        {
+                            "matches": [
+                                "[text=\"看广告得额外金币\"]"
+                            ],
+                            "actionDelay": 1000,
+                            "snapshotUrls": [
+                                "https://i.gkd.li/i/18244791"
+                            ],
+                            "activityIds": [
+                                "com.yxcorp.gifshow.webview.KwaiYodaWebViewActivity"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "看广告得32万金币",
+                    "key": 13,
+                    "desc": "看广告得32万金币->领福利",
+                    "rules": [
+                        {
+                            "matches": [
+                                "[text^=\"看广告得\"] < View + @[text=\"领福利\"]"
+                            ],
+                            "actionDelay": 1000,
+                            "snapshotUrls": [
+                                "https://i.gkd.li/i/18244861"
+                            ],
+                            "activityIds": [
+                                "com.gifshow.kuaishou.floatwidget.activity.GrowthYodaWebViewActivity"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "看广告得32万金币关闭窗口",
+                    "key": 14,
+                    "desc": "看广告得32万金币->领福利->已成功领取xx金币",
+                    "rules": [
+                        {
+                            "matches": [
+                                "[text^=\"已成功领取\"]"
+                            ],
+                            "fastQuery": true,
+                            "snapshotUrls": [
+                                "https://i.gkd.li/i/18244977"
+                            ],
+                            "activityIds": [
+                                "com.yxcorp.gifshow.ad.neo.videov2.award.AwardVideoPlayActivityV2"
+                            ]
                         }
                     ]
                 }
