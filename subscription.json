@@ -1,7 +1,7 @@
 {
     "id": 1329,
     "name": "xi的订阅",
-    "version": 125,
+    "version": 269,
     "author": "xi",
     "supportUri": "https://github.com/xishuzhi/GKD-subscription",
     "updateUrl": "https://github.com/xishuzhi/GKD-subscription/raw/main/subscription.json",
@@ -14,8 +14,8 @@
             "name": "起点读书",
             "groups": [
                 {
-                    "name": "视频奖励·二选一",
                     "key": 3,
+                    "name": "视频奖励·二选一",
                     "desc": "立即领取默认奖励",
                     "rules": [
                         {
@@ -25,7 +25,6 @@
                             "excludeMatches": [
                                 "[text^=\"确认将本书\"]"
                             ],
-                            "quickFind": true,
                             "snapshotUrls": [
                                 "https://i.gkd.li/import/13681096"
                             ]
@@ -33,8 +32,8 @@
                     ]
                 },
                 {
-                    "name": "激励碎片兑换",
                     "key": 25,
+                    "name": "激励碎片兑换",
                     "desc": "兑换100-50卷",
                     "enable": false,
                     "rules": [
@@ -68,8 +67,8 @@
                     ]
                 },
                 {
-                    "name": "开屏广告BT",
                     "key": 27,
+                    "name": "开屏广告BT",
                     "actionMaximum": 1,
                     "matchTime": 10000,
                     "resetMatch": "app",
@@ -85,8 +84,8 @@
                     ]
                 },
                 {
-                    "name": "恭喜你获得-我知道了",
                     "key": 28,
+                    "name": "恭喜你获得-我知道了",
                     "desc": "福利中心看视频后获得奖励，自动点击“我知道了",
                     "rules": [
                         {
@@ -105,15 +104,14 @@
                     ]
                 },
                 {
-                    "name": "阅读积分",
                     "key": 33,
+                    "name": "阅读积分",
                     "desc": "点击气泡领取阅读积分",
                     "rules": [
                         {
                             "matches": [
                                 "@LinearLayout > [text=\"积分\"]"
                             ],
-                            "quickFind": true,
                             "snapshotUrls": [
                                 "https://i.gkd.li/import/14079636"
                             ],
@@ -124,15 +122,14 @@
                     ]
                 },
                 {
-                    "name": "领取签到奖励",
                     "key": 35,
+                    "name": "领取签到奖励",
                     "desc": "每日任务签到奖励领取10积分",
                     "rules": [
                         {
                             "matches": [
                                 "[text=\"领取\"]"
                             ],
-                            "quickFind": true,
                             "snapshotUrls": [
                                 "https://i.gkd.li/import/14132612"
                             ],
@@ -143,8 +140,8 @@
                     ]
                 },
                 {
-                    "name": "收听15秒获取奖励",
                     "key": 45,
+                    "name": "收听15秒获取奖励",
                     "desc": "音频类广告",
                     "rules": [
                         {
@@ -175,15 +172,14 @@
                     ]
                 },
                 {
-                    "name": "最后一页弹窗",
                     "key": 51,
+                    "name": "最后一页弹窗",
                     "desc": "关闭最后一页弹出窗口",
                     "rules": [
                         {
                             "matches": [
                                 "[id=\"com.qidian.QDReader:id/imgClose\"]"
                             ],
-                            "quickFind": true,
                             "matchTime": 3000,
                             "snapshotUrls": [
                                 "https://i.gkd.li/i/14800478"
@@ -195,8 +191,8 @@
                     ]
                 },
                 {
-                    "name": "点击【继续观看】",
                     "key": 52,
+                    "name": "点击【继续观看】",
                     "desc": "观看视频时点关闭按钮提示时点击【继续观看】。",
                     "rules": [
                         {
@@ -205,7 +201,6 @@
                                 "[text=\"继续观看\"]"
                             ],
                             "actionCd": 3000,
-                            "quickFind": true,
                             "snapshotUrls": [
                                 "https://i.gkd.li/i/13710080",
                                 "https://i.gkd.li/i/14800604"
@@ -217,16 +212,15 @@
                     ]
                 },
                 {
-                    "name": "观看完毕点【X】",
                     "key": 55,
+                    "name": "观看完毕点【X】",
                     "desc": "观看完视频完毕的立即领取广告",
                     "rules": [
                         {
                             "matches": [
-                                "[text=\"立即领取\" || text=\"去微信看看\" || text$=\"下载\" || text=\"打开\" || text=\"查看详情\" || text=\"立即抢购\" || text^=\"立即预\" || text=\"立即购买\" || text^=\"了解\" || text=\"立即申请\"]",
+                                "[text=\"立即领取\" || text=\"去微信看看\" || text$=\"下载\" || text=\"打开\" || text=\"查看详情\" || text=\"立即抢购\" || text^=\"立即预\" || text=\"立即购买\" || text^=\"了解\" || text=\"立即申请\" || text=\"领取优惠\" || text=\"去逛逛\" || text=\"立即体验\"]",
                                 "RelativeLayout > RelativeLayout + ImageView"
                             ],
-                            "quickFind": true,
                             "snapshotUrls": [
                                 "https://i.gkd.li/i/14739359",
                                 "https://i.gkd.li/i/14444735",
@@ -239,8 +233,8 @@
                     ]
                 },
                 {
-                    "name": "已观看15秒",
                     "key": 59,
+                    "name": "已观看15秒",
                     "desc": "观看视频15秒关闭视频",
                     "rules": [
                         {
@@ -248,7 +242,6 @@
                                 "[text^=\"已观看视频\"]",
                                 "[text=\"跳过广告\"]"
                             ],
-                            "quickFind": true,
                             "forcedTime": 36000,
                             "activityIds": [
                                 "com.qq.e.tg.RewardvideoPortraitADActivity"
@@ -257,8 +250,8 @@
                     ]
                 },
                 {
-                    "name": "每日福利",
                     "key": 60,
+                    "name": "每日福利",
                     "desc": "自动点击看视频开宝箱，看视频领福利，限时彩蛋",
                     "rules": [
                         {
@@ -292,8 +285,8 @@
                     ]
                 },
                 {
-                    "name": "已观看15秒2",
                     "key": 62,
+                    "name": "已观看15秒2",
                     "desc": "观看视频15秒关闭视频2",
                     "enable": false,
                     "rules": [
@@ -308,8 +301,8 @@
                     ]
                 },
                 {
-                    "name": "关闭更新提醒",
                     "key": 63,
+                    "name": "关闭更新提醒",
                     "desc": "小说最后一章末尾的更新提醒自动关闭",
                     "rules": [
                         {
@@ -331,8 +324,8 @@
                     ]
                 },
                 {
-                    "name": "领取页末红包",
                     "key": 64,
+                    "name": "领取页末红包",
                     "desc": "点击页尾观看视频领红包",
                     "rules": [
                         {
@@ -354,7 +347,6 @@
                             "matches": [
                                 "[vid=\"layoutHongbaoRoot\"]"
                             ],
-                            "quickFind": true,
                             "activityIds": [
                                 "com.qidian.QDReader.ui.activity.QDReaderActivity"
                             ]
@@ -362,8 +354,8 @@
                     ]
                 },
                 {
-                    "name": "兑换100起点币",
                     "key": 65,
+                    "name": "兑换100起点币",
                     "desc": "使用500听书成长积分兑换点币*100",
                     "rules": [
                         {
@@ -391,8 +383,8 @@
                     ]
                 },
                 {
-                    "name": "每周日兑换章节卡",
                     "key": 66,
+                    "name": "每周日兑换章节卡",
                     "desc": "每周日用30碎片兑换20点章节卡",
                     "rules": [
                         {
@@ -443,8 +435,8 @@
                     ]
                 },
                 {
-                    "name": "起点新版激励视频",
                     "key": 67,
+                    "name": "起点新版激励视频",
                     "desc": "点击看视频领奖励",
                     "rules": [
                         {
@@ -467,8 +459,8 @@
                     ]
                 },
                 {
-                    "name": "起点新版激励视频关闭",
                     "key": 68,
+                    "name": "起点新版激励视频关闭",
                     "desc": "起点新版激励视频播放完成点击知道了",
                     "rules": [
                         {
@@ -486,8 +478,8 @@
                     ]
                 },
                 {
-                    "name": "新版领积分",
                     "key": 69,
+                    "name": "新版领积分",
                     "desc": "新版领取看书积分",
                     "rules": [
                         {
@@ -505,8 +497,8 @@
                     ]
                 },
                 {
-                    "name": "起点激励视频点【x】",
                     "key": 70,
+                    "name": "起点激励视频点【x】",
                     "desc": "新版起点激励视频看完点【x】",
                     "rules": [
                         {
@@ -524,8 +516,8 @@
                     ]
                 },
                 {
-                    "name": "新版起点限时福利2",
                     "key": 71,
+                    "name": "新版起点限时福利2",
                     "desc": "新版起点激励视频看完点【x】2",
                     "rules": [
                         {
@@ -539,8 +531,8 @@
                     ]
                 },
                 {
-                    "name": "新版起点限时福利",
                     "key": 72,
+                    "name": "新版起点限时福利",
                     "desc": "放弃福利继续观看视频",
                     "rules": [
                         {
@@ -554,8 +546,8 @@
                     ]
                 },
                 {
-                    "name": "看视频后点X",
                     "key": 73,
+                    "name": "看视频后点X",
                     "desc": "提示恭喜获得奖励时点X",
                     "rules": [
                         {
@@ -573,8 +565,8 @@
                     ]
                 },
                 {
-                    "name": "看视频时弹出限时福利X",
                     "key": 74,
+                    "name": "看视频时弹出限时福利X",
                     "desc": "看视频时弹出限时福利时点X",
                     "rules": [
                         {
@@ -598,10 +590,9 @@
             "name": "亿通行",
             "groups": [
                 {
-                    "name": "刷码成功广告弹窗",
                     "key": 1,
+                    "name": "刷码成功广告弹窗",
                     "desc": "点击刷码成功弹窗页面关闭按钮",
-                    "quickFind": true,
                     "actionMaximum": 1,
                     "matchTime": 2000,
                     "resetMatch": "activity",
@@ -620,15 +611,14 @@
                     ]
                 },
                 {
-                    "name": "刷码成功广告弹窗2",
                     "key": 2,
+                    "name": "刷码成功广告弹窗2",
                     "desc": "刷码成功广告点击返回",
                     "rules": [
                         {
                             "matches": [
                                 "[id=\"enfc.metro:id/img_CommonTitleBar_LeftImage\"]"
                             ],
-                            "quickFind": true,
                             "snapshotUrls": [
                                 "https://i.gkd.li/i/15291793"
                             ],
@@ -639,8 +629,8 @@
                     ]
                 },
                 {
-                    "name": "刷卡成功后广告",
                     "key": 3,
+                    "name": "刷卡成功后广告",
                     "desc": "关闭刷码成功后弹出广告",
                     "rules": [
                         {
@@ -664,8 +654,8 @@
             "name": "备份和还原",
             "groups": [
                 {
-                    "name": "备份完成广告",
                     "key": 0,
+                    "name": "备份完成广告",
                     "desc": "关闭备份完成弹窗广告",
                     "rules": [
                         {
@@ -691,8 +681,8 @@
             "name": "掌阅",
             "groups": [
                 {
-                    "name": "升级提醒",
                     "key": 0,
+                    "name": "升级提醒",
                     "desc": "关闭升级提示弹窗",
                     "rules": [
                         {
@@ -715,8 +705,8 @@
             "name": "QQ阅读",
             "groups": [
                 {
-                    "name": "开会员领赠币",
                     "key": 4,
+                    "name": "开会员领赠币",
                     "desc": "关闭开会员再领赠币窗口",
                     "rules": [
                         {
@@ -734,8 +724,8 @@
                     ]
                 },
                 {
-                    "name": "浏览页面15秒点【x】",
                     "key": 7,
+                    "name": "浏览页面15秒点【x】",
                     "desc": "浏览页面广告15秒点【x】关闭",
                     "rules": [
                         {
@@ -750,15 +740,14 @@
                     ]
                 },
                 {
-                    "name": "QQ阅读页面广告",
                     "key": 8,
+                    "name": "QQ阅读页面广告",
                     "desc": "浏览页面15秒关闭",
                     "rules": [
                         {
                             "matches": [
                                 "[text=\"已浏览页面 15秒 ,可获得奖励\"] - ImageView[clickable=true]"
                             ],
-                            "quickFind": true,
                             "snapshotUrls": [
                                 "https://i.gkd.li/import/14035151"
                             ],
@@ -769,8 +758,8 @@
                     ]
                 },
                 {
-                    "name": "关闭恭喜获得窗口",
                     "key": 9,
+                    "name": "关闭恭喜获得窗口",
                     "desc": "完成任务弹窗恭喜获得赠币开会员再领赠币",
                     "rules": [
                         {
@@ -784,8 +773,8 @@
                     ]
                 },
                 {
-                    "name": "领取成功窗口",
                     "key": 10,
+                    "name": "领取成功窗口",
                     "desc": "提示开会员窗口",
                     "rules": [
                         {
@@ -810,15 +799,14 @@
                     ]
                 },
                 {
-                    "name": "开屏广告",
                     "key": 12,
+                    "name": "开屏广告",
                     "desc": "开屏广告，后台切前台广告",
                     "rules": [
                         {
                             "matches": [
                                 "[text^=\"跳过\"]"
                             ],
-                            "quickFind": true,
                             "matchTime": 3000,
                             "resetMatch": "app",
                             "snapshotUrls": [
@@ -835,8 +823,8 @@
                     ]
                 },
                 {
-                    "name": "视频广告点击【x】",
                     "key": 13,
+                    "name": "视频广告点击【x】",
                     "desc": "观看完视频广告点击【x】",
                     "rules": [
                         {
@@ -853,8 +841,8 @@
                     ]
                 },
                 {
-                    "name": "观看30秒关闭视频",
                     "key": 14,
+                    "name": "观看30秒关闭视频",
                     "desc": "观看视频超过31秒点击关闭按钮",
                     "rules": [
                         {
@@ -873,8 +861,8 @@
                     ]
                 },
                 {
-                    "name": "阅读30分钟休息提示",
                     "key": 15,
+                    "name": "阅读30分钟休息提示",
                     "desc": "持续阅读30分钟的提示弹窗",
                     "rules": [
                         {
@@ -882,7 +870,6 @@
                                 "[text$=\"休息一下吧\"]",
                                 "[text=\"继续阅读\"]"
                             ],
-                            "quickFind": true,
                             "snapshotUrls": [
                                 "https://i.gkd.li/i/15059546"
                             ],
@@ -899,10 +886,9 @@
             "name": "抖音极速版",
             "groups": [
                 {
-                    "name": "领取成功",
                     "key": 0,
+                    "name": "领取成功",
                     "desc": "抖音广告点击领取成功按钮",
-                    "quickFind": true,
                     "rules": [
                         {
                             "action": "clickCenter",
@@ -916,10 +902,9 @@
                     ]
                 },
                 {
-                    "name": "再领一个",
                     "key": 1,
+                    "name": "再领一个",
                     "desc": "领取奖励后再看视频领一个奖励",
-                    "quickFind": true,
                     "rules": [
                         {
                             "matches": [
@@ -932,10 +917,9 @@
                     ]
                 },
                 {
-                    "name": "点击开心收下",
                     "key": 2,
+                    "name": "点击开心收下",
                     "desc": "领取奖励点击开心收下",
-                    "quickFind": true,
                     "rules": [
                         {
                             "matches": [
@@ -951,15 +935,14 @@
                     ]
                 },
                 {
-                    "name": "抖音看小说底部广告",
                     "key": 3,
+                    "name": "抖音看小说底部广告",
                     "desc": "抖音小说底部广告条点【x】",
                     "rules": [
                         {
                             "matches": [
                                 "[id=\"m.l.novel:id/novel_bottom_banner_close\"]"
                             ],
-                            "quickFind": true,
                             "snapshotUrls": [
                                 "https://i.gkd.li/import/14034185"
                             ],
@@ -970,14 +953,13 @@
                     ]
                 },
                 {
-                    "name": "广告视频关闭",
                     "key": 4,
+                    "name": "广告视频关闭",
                     "rules": [
                         {
                             "matches": [
                                 "[text=\"关闭\"]"
                             ],
-                            "quickFind": true,
                             "activityIds": [
                                 "com.ss.android.excitingvideo.ExcitingVideoActivity"
                             ]
@@ -991,10 +973,9 @@
             "name": "番茄免费小说",
             "groups": [
                 {
-                    "name": "视频播放完成点【X】",
                     "key": 0,
+                    "name": "视频播放完成点【X】",
                     "desc": "观看视频免广告",
-                    "quickFind": true,
                     "rules": [
                         {
                             "action": "clickCenter",
@@ -1008,10 +989,9 @@
                     ]
                 },
                 {
-                    "name": "免广告确认",
                     "key": 1,
+                    "name": "免广告确认",
                     "desc": "观看视频免广告，点击我知道了。",
-                    "quickFind": true,
                     "rules": [
                         {
                             "matches": [
@@ -1033,10 +1013,9 @@
             "name": "亲邻开门",
             "groups": [
                 {
-                    "name": "顶部横幅广告",
                     "key": 0,
+                    "name": "顶部横幅广告",
                     "desc": "点击主页顶部横幅广告【x】。",
-                    "quickFind": true,
                     "rules": [
                         {
                             "matches": [
@@ -1052,10 +1031,9 @@
                     ]
                 },
                 {
-                    "name": "弹窗广告点【x】",
                     "key": 1,
+                    "name": "弹窗广告点【x】",
                     "desc": "开门成功后的弹窗广告",
-                    "quickFind": true,
                     "rules": [
                         {
                             "matches": [
@@ -1068,8 +1046,8 @@
                     ]
                 },
                 {
-                    "name": "开门成功广告",
                     "key": 2,
+                    "name": "开门成功广告",
                     "desc": "开门成功点击右上角【x】",
                     "rules": [
                         {
@@ -1083,8 +1061,8 @@
                     ]
                 },
                 {
-                    "name": "开门成功提示",
                     "key": 3,
+                    "name": "开门成功提示",
                     "desc": "开门成功点好的关闭",
                     "rules": [
                         {
@@ -1101,8 +1079,8 @@
                     ]
                 },
                 {
-                    "name": "开门成功广告2",
                     "key": 4,
+                    "name": "开门成功广告2",
                     "desc": "开门成功点右上角x按钮尺寸60",
                     "rules": [
                         {
@@ -1119,8 +1097,8 @@
                     ]
                 },
                 {
-                    "name": "开门成功点击x",
                     "key": 5,
+                    "name": "开门成功点击x",
                     "desc": "开门成功广告点x",
                     "rules": [
                         {
@@ -1140,8 +1118,8 @@
             "name": "番茄畅听",
             "groups": [
                 {
-                    "name": "领免费时长",
                     "key": 0,
+                    "name": "领免费时长",
                     "desc": "看广告领听书时长",
                     "rules": [
                         {
@@ -1150,7 +1128,6 @@
                             "matches": [
                                 "[id=\"com.xs.fm:id/qt\"] > TextView[text=\"看视频领时长\"]"
                             ],
-                            "quickFind": true,
                             "snapshotUrls": [
                                 "https://i.gkd.li/import/13910518"
                             ],
@@ -1175,8 +1152,8 @@
                     ]
                 },
                 {
-                    "name": "领取成功点【x】",
                     "key": 1,
+                    "name": "领取成功点【x】",
                     "desc": "看视频获取免费听书时长",
                     "rules": [
                         {
@@ -1210,8 +1187,8 @@
                     ]
                 },
                 {
-                    "name": "看视频领XX时长",
                     "key": 2,
+                    "name": "看视频领XX时长",
                     "desc": "番茄畅听看视频领10分钟听书时长。",
                     "rules": [
                         {
@@ -1220,7 +1197,6 @@
                                 "[text=\"看视频领XX时长\"]"
                             ],
                             "actionDelay": 1300,
-                            "quickFind": true,
                             "snapshotUrls": [
                                 "https://i.gkd.li/i/16831957"
                             ],
@@ -1238,17 +1214,16 @@
             "name": "哔哩哔哩",
             "groups": [
                 {
-                    "name": "首页-推荐视频卡片广告",
                     "key": 0,
+                    "name": "首页-推荐视频卡片广告",
                     "enable": false,
-                    "quickFind": true,
                     "activityIds": [
                         "tv.danmaku.bili.MainActivityV2"
                     ],
                     "rules": [
                         {
-                            "name": "点击广告卡片右下角菜单按钮",
                             "key": 0,
+                            "name": "点击广告卡片右下角菜单按钮",
                             "matches": [
                                 "[id=\"tv.danmaku.bili:id/ad_tint_frame\"] [id=\"tv.danmaku.bili:id/more\"]"
                             ],
@@ -1257,15 +1232,14 @@
                             ]
                         },
                         {
-                            "name": "点击[不感兴趣]",
                             "key": 1,
+                            "name": "点击[不感兴趣]",
                             "preKeys": [
                                 0
                             ],
                             "matches": [
                                 "[text$=\"不感兴趣\"]"
                             ],
-                            "quickFind": true,
                             "snapshotUrls": [
                                 "https://i.gkd.li/import/13256605",
                                 "https://i.gkd.li/import/13625309",
@@ -1276,8 +1250,8 @@
                     ]
                 },
                 {
-                    "name": "猫猫点喵",
                     "key": 1,
+                    "name": "猫猫点喵",
                     "desc": "点喵",
                     "rules": [
                         {
@@ -1292,8 +1266,8 @@
                     ]
                 },
                 {
-                    "name": "猫猫打开控制",
                     "key": 2,
+                    "name": "猫猫打开控制",
                     "desc": "打开猫猫",
                     "rules": [
                         {
@@ -1315,8 +1289,8 @@
             "name": "手机管家",
             "groups": [
                 {
-                    "name": "禁止亲邻开门启动应用",
                     "key": 0,
+                    "name": "禁止亲邻开门启动应用",
                     "desc": "亲邻开门启动应用自动点“拒绝”。",
                     "rules": [
                         {
@@ -1324,7 +1298,6 @@
                                 "[text=\"启动应用\"] + [text^=\"亲邻开门\"]",
                                 "[text=\"拒绝\"]"
                             ],
-                            "quickFind": true,
                             "snapshotUrls": [
                                 "https://i.gkd.li/i/14770420"
                             ]
@@ -1338,15 +1311,14 @@
             "name": "抖音火山版",
             "groups": [
                 {
-                    "name": "宝箱1",
                     "key": 0,
+                    "name": "宝箱1",
                     "desc": "关闭宝箱广告播放完毕领取成功按钮",
                     "rules": [
                         {
                             "matches": [
                                 "[text=\"领取成功，关闭，按钮\"]"
                             ],
-                            "quickFind": true,
                             "snapshotUrls": [
                                 "https://i.gkd.li/i/15383808"
                             ],
@@ -1357,15 +1329,14 @@
                     ]
                 },
                 {
-                    "name": "宝箱2",
                     "key": 1,
+                    "name": "宝箱2",
                     "desc": "宝箱关闭继续领取",
                     "rules": [
                         {
                             "matches": [
                                 "[text=\"领取奖励\"]"
                             ],
-                            "quickFind": true,
                             "snapshotUrls": [
                                 "https://i.gkd.li/i/15383816"
                             ],
@@ -1382,15 +1353,14 @@
             "name": "快手极速版",
             "groups": [
                 {
-                    "name": "看完领取奖励",
                     "key": 0,
+                    "name": "看完领取奖励",
                     "rules": [
                         {
                             "action": "clickCenter",
                             "matches": [
                                 "[text=\"已成功领取奖励\"]"
                             ],
-                            "quickFind": true,
                             "activityIds": [
                                 "com.yxcorp.gifshow.ad.neo.video.award.AwardVideoPlayActivity"
                             ]
@@ -1398,14 +1368,13 @@
                     ]
                 },
                 {
-                    "name": "饭补金币",
                     "key": 3,
+                    "name": "饭补金币",
                     "rules": [
                         {
                             "matches": [
                                 "[text=\"已成功领取奖励\"]"
                             ],
-                            "quickFind": true,
                             "activityIds": [
                                 "com.yxcorp.gifshow.ad.neo.videov2.award.AwardVideoPlayActivityV2"
                             ]
@@ -1413,8 +1382,8 @@
                     ]
                 },
                 {
-                    "name": "看直播领奖励",
                     "key": 4,
+                    "name": "看直播领奖励",
                     "rules": [
                         {
                             "matches": [
@@ -1428,15 +1397,14 @@
                     ]
                 },
                 {
-                    "name": "猜你喜欢点退出",
                     "key": 6,
+                    "name": "猜你喜欢点退出",
                     "rules": [
                         {
                             "matches": [
                                 "[text=\"猜你喜欢\"]",
                                 "[text=\"退出\"]"
                             ],
-                            "quickFind": true,
                             "activityIds": [
                                 "com.yxcorp.gifshow.detail.PhotoDetailActivity"
                             ]
@@ -1444,8 +1412,8 @@
                     ]
                 },
                 {
-                    "name": "看广告领福利",
                     "key": 7,
+                    "name": "看广告领福利",
                     "enable": false,
                     "rules": [
                         {
@@ -1459,32 +1427,30 @@
                     ]
                 },
                 {
-                    "name": "放弃奖励",
                     "key": 9,
+                    "name": "放弃奖励",
                     "rules": [
                         {
                             "matches": [
                                 "[text=\"放弃奖励\"]"
-                            ],
-                            "quickFind": true
+                            ]
                         }
                     ]
                 },
                 {
-                    "name": "再看一个视频",
                     "key": 10,
+                    "name": "再看一个视频",
                     "rules": [
                         {
                             "matches": [
                                 "[text=\"领取奖励\"]"
-                            ],
-                            "quickFind": true
+                            ]
                         }
                     ]
                 },
                 {
-                    "name": "看完领取奖励2",
                     "key": 11,
+                    "name": "看完领取奖励2",
                     "rules": [
                         {
                             "matches": [
@@ -1501,8 +1467,8 @@
                     ]
                 },
                 {
-                    "name": "到点领饭",
                     "key": 12,
+                    "name": "到点领饭",
                     "desc": "看广告",
                     "rules": [
                         {
@@ -1520,8 +1486,8 @@
                     ]
                 },
                 {
-                    "name": "看广告得32万金币",
                     "key": 13,
+                    "name": "看广告得32万金币",
                     "desc": "看广告得32万金币->领福利",
                     "rules": [
                         {
@@ -1539,8 +1505,8 @@
                     ]
                 },
                 {
-                    "name": "看广告得32万金币关闭窗口",
                     "key": 14,
+                    "name": "看广告得32万金币关闭窗口",
                     "desc": "看广告得32万金币->领福利->已成功领取xx金币",
                     "rules": [
                         {
@@ -1553,6 +1519,146 @@
                             ],
                             "activityIds": [
                                 "com.yxcorp.gifshow.ad.neo.videov2.award.AwardVideoPlayActivityV2"
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "com.ss.android.article.lite",
+            "name": "今日头条极速版",
+            "groups": [
+                {
+                    "key": 0,
+                    "name": "看完视频广告点X",
+                    "desc": "开宝箱看视频，领取成功点X",
+                    "rules": [
+                        {
+                            "matches": [
+                                "FlattenUIText[text=\"领取成功\"]"
+                            ],
+                            "fastQuery": true,
+                            "snapshotUrls": [
+                                "https://i.gkd.li/i/18747554"
+                            ],
+                            "activityIds": [
+                                "com.ss.android.excitingvideo.ExcitingVideoActivity"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "key": 1,
+                    "name": "看视频再得xx金币",
+                    "desc": "看视频点X后弹出看视频再得xx金币，点看视频",
+                    "rules": [
+                        {
+                            "matches": [
+                                "FlattenUIText[text^=\"看视频再得\"]"
+                            ],
+                            "fastQuery": true,
+                            "snapshotUrls": [
+                                "https://i.gkd.li/i/18747585"
+                            ],
+                            "activityIds": [
+                                "com.ss.android.excitingvideo.ExcitingVideoActivity"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "key": 2,
+                    "name": "提示逛街时点X",
+                    "desc": "看完所有视频提示逛街时点X",
+                    "rules": [
+                        {
+                            "matches": [
+                                "[text^=\"逛街最多再领\"] +2 FlattenUIImage"
+                            ],
+                            "snapshotUrls": [
+                                "https://i.gkd.li/i/18747615"
+                            ],
+                            "activityIds": [
+                                "com.bytedance.common.plugin.base.lynx.popup.ProxyPopupActivity"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "key": 3,
+                    "name": "提示看视频再领XX金币",
+                    "desc": "看完所有视频提示看视频再领X金币",
+                    "rules": [
+                        {
+                            "matches": [
+                                "@[text^=\"看视频再领领\"] +2 FlattenUIImage"
+                            ],
+                            "activityIds": [
+                                "com.bytedance.common.plugin.base.lynx.popup.ProxyPopupActivity"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "key": 4,
+                    "name": "宝箱领完继续领",
+                    "desc": "宝箱领完继续领金币，大于2位数",
+                    "rules": [
+                        {
+                            "matches": [
+                                "@ViewGroup[childCount=2] > ViewGroup[desc.length>2]"
+                            ],
+                            "activityIds": [
+                                "com.ss.android.article.lite.activity.SplashActivity"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "key": 5,
+                    "name": "宝箱结束再看视频",
+                    "desc": "宝箱领取完毕再看一个视频领金币",
+                    "rules": [
+                        {
+                            "matches": [
+                                "LynxFlattenUI[text^=\"看视频再领\"]"
+                            ],
+                            "activityIds": [
+                                "com.bytedance.common.plugin.base.lynx.popup.ProxyPopupActivity"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "key": 6,
+                    "name": "获得宝箱奖励点看视频",
+                    "desc": "获得宝箱奖励点开视频再领xxx金币",
+                    "rules": [
+                        {
+                            "matches": [
+                                "@ViewGroup[childCount=2] > ViewGroup[desc~=\"\\\\d+\"]"
+                            ],
+                            "snapshotUrls": [
+                                "https://i.gkd.li/i/18776538"
+                            ],
+                            "activityIds": [
+                                "com.bytedance.android.live.ecommerce.task.mall.page.TaskMallPageActivity"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "key": 7,
+                    "name": "看视频完成点击领取成功",
+                    "desc": "看视频完成点击领取成功",
+                    "rules": [
+                        {
+                            "matches": [
+                                "[text=\"领取成功\"]"
+                            ],
+                            "activityIds": [
+                                "com.ss.android.excitingvideo.ExcitingVideoActivity"
                             ]
                         }
                     ]
